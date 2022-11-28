@@ -1,0 +1,28 @@
+<div class="row">
+    <h3 class="center-align"> Crear Productos</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()"method="POST" action="formulario-contanco.php">
+            <input type="hidden" formControlName="id"/>
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="precio"class="active">Precio</label>
+                <input formControlName="precio"type="text" name="precio" required>
+            </div>
+            <div class="input-field">
+                <label for="image"class="active">Imagen</label>
+                <input formControlName="imagen" type="text" name="imagen" required>
+            </div>
+            <p class="center-align">
+                <button class="waver-effect waves-ligth btn" type="submit"><i
+                    class="material-icons rigth">send</i>Enviar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+</div>
+
